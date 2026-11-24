@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4f0">
+  <meta name="description" content="Практические работы по веб-разработке — интерактивные проекты и исходный код.">
+  <title>Практические работы — Yaroslav</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f5f4f0;--ink:#20211f;--muted:#777971;--line:#dcdcd5;--accent:#566b52;--white:#fff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px,calc(100% - 64px));margin:auto}
+    .topbar{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+    .brand{font-size:15px;font-weight:800;letter-spacing:-.04em}.brand span{color:var(--accent)}
+    .top-note,.eyebrow,.meta,.number,.footer-note{font-family:"DM Mono",monospace;text-transform:uppercase;letter-spacing:.09em;font-size:10px}
+    .top-note{color:var(--muted)}
+    .hero{padding:94px 0 74px;display:grid;grid-template-columns:1fr 240px;gap:40px;align-items:end}
+    .eyebrow{color:var(--accent);margin:0 0 22px}
+    h1{font-size:clamp(48px,8vw,92px);line-height:.98;letter-spacing:-.085em;font-weight:600;margin:0;max-width:780px}
+    .hero-copy{font-size:14px;line-height:1.8;color:var(--muted);max-width:245px;margin:0 0 5px}
+    .stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;display:flex;gap:34px;align-items:center;margin-bottom:58px}
+    .stat{display:flex;align-items:baseline;gap:9px}.stat strong{font-size:22px;font-weight:600;letter-spacing:-.06em}.stat span{font-size:11px;color:var(--muted)}
+    .section-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+    .section-head h2{font-size:12px;font-weight:700;letter-spacing:.02em;margin:0}
+    .section-head span{color:var(--muted);font:10px "DM Mono",monospace}
+    .projects{border-top:1px solid var(--ink)}
+    .project{display:grid;grid-template-columns:76px minmax(0,1fr) 220px;gap:24px;align-items:center;padding:27px 0;border-bottom:1px solid var(--line);transition:padding .2s ease}
+    .project:hover{padding-left:8px;padding-right:8px}
+    .number{color:var(--muted);padding-top:3px}
+    .project-title{font-size:20px;letter-spacing:-.045em;font-weight:650;margin:0 0 7px}
+    .project-desc{font-size:12px;line-height:1.7;color:var(--muted);margin:0;max-width:610px}
+    .tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:11px}
+    .tag{font:9px "DM Mono",monospace;color:#6d7068;border:1px solid var(--line);padding:5px 8px;border-radius:2px}
+    .actions{display:flex;justify-content:flex-end;gap:8px}
+    .btn{height:38px;padding:0 13px;display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line);font-size:11px;font-weight:700;white-space:nowrap;transition:background .2s,color .2s,border-color .2s}
+    .btn svg{width:13px;height:13px}
+    .btn-primary{background:var(--ink);border-color:var(--ink);color:white}
+    .btn-primary:hover{background:var(--accent);border-color:var(--accent)}
+    .btn-secondary:hover{border-color:var(--ink);background:white}
+    .btn.disabled{opacity:.42;pointer-events:none}
+    .self .project-title{color:var(--accent)}
+    .footer{margin-top:76px;padding:22px 0 30px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted)}
+    .footer-note{font-size:9px}
+    .footer a{font-size:11px}
+    @media(max-width:760px){.wrap{width:min(100% - 36px,560px)}.topbar{height:64px}.hero{padding:65px 0 45px;grid-template-columns:1fr;gap:24px}.hero-copy{max-width:420px}.stats{margin-bottom:42px}.project{grid-template-columns:36px minmax(0,1fr);gap:13px;padding:22px 0}.actions{grid-column:2;justify-content:flex-start;margin-top:3px}.project-title{font-size:18px}.footer{margin-top:55px}}
+    @media(max-width:390px){.btn{padding:0 10px;font-size:10px}.stats{gap:22px}.top-note{font-size:9px}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto;transition:none!important}}
+  </style>
+</head>
+<body>
+  <header class="topbar wrap">
+    <a class="brand" href="#top">YAROSLAV<span>.</span>WORKS</a>
+    <span class="top-note">Практические работы · 2026</span>
+  </header>
+
+  <main id="top" class="wrap">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Коллекция учебных проектов / 01—08</p>
+        <h1>От идеи<br>до результата.</h1>
+      </div>
+      <p class="hero-copy">Подборка практических работ по веб-разработке. Каждый проект можно открыть в браузере или скачать вместе с исходным кодом.</p>
+    </section>
+
+    <section class="stats" aria-label="Статистика работ">
+      <div class="stat"><strong>07</strong><span>проектов в коллекции</span></div>
+      <div class="stat"><strong>06</strong><span>готовы к просмотру после публикации</span></div>
+      <div class="stat"><strong>01</strong><span>этот каталог</span></div>
+    </section>
+
+    <div class="section-head">
+      <h2>Избранные работы</h2>
+      <span>01 — 06 / 08</span>
+    </div>
+    <section class="projects" aria-label="Список проектов">
+      <article class="project">
+        <div class="number">01 / WEB</div>
+        <div><h3 class="project-title">Основы HTML</h3><p class="project-desc">Многостраничная HTML-страница: структура документа, текстовые блоки, изображения и переход между страницами.</p><div class="tags"><span class="tag">HTML</span><span class="tag">Разметка</span></div></div>
+        <div class="actions"><a class="btn btn-primary preview" href="https://z1.pages.dev/" target="_blank" rel="noopener">Посмотреть <span>↗</span></a><a class="btn btn-secondary" href="https://github.com/sk8teJ/z1/archive/refs/heads/main.zip" download>Скачать ↓</a></div>
+      </article>
+      <article class="project">
+        <div class="number">02 / CSS</div>
+        <div><h3 class="project-title">Стилизация страниц</h3><p class="project-desc">Оформление HTML-страниц с помощью CSS: цвета, типографика, выравнивание элементов и изображения.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span></div></div>
+        <div class="actions"><a class="btn btn-primary preview" href="https://z2.pages.dev/" target="_blank" rel="noopener">Посмотреть <span>↗</span></a><a class="btn btn-secondary" href="https://github.com/sk8teJ/z2/archive/refs/heads/main.zip" download>Скачать ↓</a></div>
+      </article>
+      <article class="project">
+        <div class="number">03 / LAYOUT</div>
+        <div><h3 class="project-title">WAWE — школа сёрфинга</h3><p class="project-desc">Сайт школы сёрфинга с тематическими секциями, навигацией, информацией о школе и команде.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Адаптивность</span></div></div>
+        <div class="actions"><a class="btn btn-primary preview" href="https://z3.pages.dev/" target="_blank" rel="noopener">Посмотреть <span>↗</span></a><a class="btn btn-secondary" href="https://github.com/sk8teJ/z3/archive/refs/heads/main.zip" download>Скачать ↓</a></div>
+      </article>
+      <article class="project">
+        <div class="number">04 / DESIGN</div>
+        <div><h3 class="project-title">Тайны собак</h3><p class="project-desc">Тематический информационный сайт о собаках: выразительная типографика, изображения, контентные блоки и навигация.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div></div>
+        <div class="actions"><a class="btn btn-primary preview" href="https://zadanie4.pages.dev/" target="_blank" rel="noopener">Посмотреть <span>↗</span></a><a class="btn btn-secondary" href="https://github.com/sk8teJ/zadanie4/archive/refs/heads/main.zip" download>Скачать ↓</a></div>
+      </article>
+      <article class="project">
+        <div class="number">05 / SASS</div>
+        <div><h3 class="project-title">Борщ — digital-агентство</h3><p class="project-desc">Лендинг маркетингового агентства с блоками услуг, авторским визуальным стилем и адаптивной вёрсткой на SCSS.</p><div class="tags"><span class="tag">HTML</span><span class="tag">SCSS</span><span class="tag">JavaScript</span></div></div>
+        <div class="actions"><a class="btn btn-primary preview" href="https://z5.pages.dev/" target="_blank" rel="noopener">Посмотреть <span>↗</span></a><a class="btn btn-secondary" href="https://github.com/sk8teJ/z5/archive/refs/heads/main.zip" download>Скачать ↓</a></div>
+      </article>
+      <article class="project">
+        <div class="number">06 / BOOTSTRAP</div>
+        <div><h3 class="project-title">Формы и компоненты</h3><p class="project-desc">Практическая работа с Bootstrap 5: формы, кнопки, таблицы, карточки и модальное окно.</p><div class="tags"><span class="tag">Bootstrap 5</span><span class="tag">HTML</span><span class="tag">JavaScript</span></div></div>
+        <div class="actions"><a class="btn btn-primary preview" href="https://z6.pages.dev/" target="_blank" rel="noopener">Посмотреть <span>↗</span></a><a class="btn btn-secondary" href="https://github.com/sk8teJ/z6/archive/refs/heads/main.zip" download>Скачать ↓</a></div>
+      </article>
+      <article class="project self">
+        <div class="number">08 / INDEX</div>
+        <div><h3 class="project-title">Каталог работ</h3><p class="project-desc">Эта страница — единая точка входа ко всем практическим проектам с просмотром опубликованных версий и скачиванием исходников.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Cloudflare Pages</span></div></div>
+        <div class="actions"><a class="btn btn-primary" href="#top">Вы здесь <span>↗</span></a><a class="btn btn-secondary" href="https://github.com/sk8teJ/z8/archive/refs/heads/main.zip">Скачать ↓</a></div>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <span class="footer-note">WEB DEVELOPMENT / PRACTICE COLLECTION</span>
+      <a href="https://github.com/sk8teJ" target="_blank" rel="noopener">GitHub ↗</a>
+    </footer>
+  </main>
+</body>
+</html>
