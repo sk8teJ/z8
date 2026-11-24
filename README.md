@@ -17,7 +17,7 @@
 - Production branch: `main`
 - Framework preset: `None`
 - Build command: оставить пустым
-- Build output directory: `/`
+- Build output directory: `.`
 
 ## Адреса предпросмотра
 
